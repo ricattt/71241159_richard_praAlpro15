@@ -1,0 +1,12 @@
+def cek_palindrom(kalimat):
+    kalimat = kalimat.replace(" ", "").lower()
+
+    if len(kalimat) <= 1:
+        return True
+    if kalimat[0] != kalimat[-1]:
+        return False
+    return cek_palindrom(kalimat[1:-1])
+
+print(cek_palindrom("Kasur rusak"))
+print(cek_palindrom("Ini bukan"))
+print(cek_palindrom("A nut for a jar of tuna"))
