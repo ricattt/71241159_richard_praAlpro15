@@ -1,0 +1,12 @@
+def angka(n):
+    if n == 0:
+        return 0
+    elif n < 10:
+        return n
+    else:
+        return (n % 10 + angka(n // 10))
+
+
+print(angka(234))
+print(angka(1357))
+print(angka(2468))
